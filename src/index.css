@@ -32,13 +32,13 @@ body{
 }
 
 .book img{
-  /* width: 100%;
+  width: 100%;
   object-fit: cover;
-} */
-  width: 200px;
-  height: auto;
-  border-radius: 8px;
 }
+  /* width: 200px;
+  height: auto;
+  border-radius: 8px; */
+
 
 
 .book h2{

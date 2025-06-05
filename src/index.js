@@ -31,6 +31,7 @@ const BookList = () => {
 
       // const  {img, title, author, id}= book;
       // return <Book img ={img} title={title} author={author} key= {id} ></Book>
+      
       return <Book {...book} key={book.id} />
 ;      
     })}
@@ -38,52 +39,57 @@ const BookList = () => {
   );
 };
 
-const EventExamples = () => {
+// const EventExamples = () => {
 
-  const handleFormInput = (e) => {
-    // console.log(e);
-    console.log(e.target);
-    console.log(e.target.name);
-    console.log(e.target.value);
-  };
+//   const handleFormInput = (e) => {
+//     // console.log(e);
+//     console.log(e.target);
+//     console.log(e.target.name);
+//     console.log(e.target.value);
+//   };
 
-  const handleButtonClick = () => {
-    alert("handle button click");
-};
+//   const handleButtonClick = () => {
+//     alert("handle button click");
+// };
 
-const handleFormSubmission =(e) => {
+// const handleFormSubmission =(e) => {
 
-  e.preventDefault();
-  console.log ("form submitted");
+//   e.preventDefault();
+//   console.log ("form submitted");
 
-};
+// };
 
-return (
-  <section>
-    <form onSubmit={handleFormSubmission}>
-      <h2>Typical Form</h2>
-      <input
-        type="text"
-        name="product"
-        onChange={handleFormInput}
-        style={{ margin: "1rem 0" }}
-      />
+// return (
+//   <section>
+//     <form onSubmit={handleFormSubmission}>
+//       <h2>Typical Form</h2>
+//       <input
+//         type="text"
+//         name="product"
+//         onChange={handleFormInput}
+//         style={{ margin: "1rem 0" }}
+//       />
 
-      <button onClick={handleButtonClick} type="button">
-        Click Me
-      </button>
-    </form>
-  </section>
-);
-};
+//       <button onClick={handleButtonClick} type="button">
+//         Click Me
+//       </button>
+//     </form>
+//   </section>
+// );
+// };
 
 
 const Book = (props) =>{
   const {img, author, title } = props;
+  const displayTitle = () => {
+    console.log(title);
+  };
+
   return (
     <article className = "book">
       <img src={img} alt={title} />
       <h2> {title} </h2>
+      <button onClick={displayTitle}>display title</button>
       <h4>{author}</h4>
     </article>
   );
@@ -95,6 +101,5 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
 <BookList />
-<EventExamples/>
 </>
 );

@@ -27,6 +27,7 @@ body {
 }
 
 .book {
+  position: relative;
   background: #fff;
   border-radius: 1rem;
   padding: 2rem;
@@ -76,13 +77,13 @@ body {
 }
 
 .number {
-  position:absolute;
+  position: absolute;
   top: 0;
-  left:0;
+  left: 0;
   padding: 0.75rem;
   font-size: 1rem;
   border-top-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
-  background:rebeccapurple ;
+  background: rgb(153, 67, 127);
   color: #fff;
 }
